@@ -1,0 +1,5 @@
+Student name: Max Swart
+Student number: 756775
+Student class: HAINF26VT1B
+GitHub Repository: https://github.com/marsyax/Webmarkup
+GitHub Pages URL: https://marsyax.github.io/
