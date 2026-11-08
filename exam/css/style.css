@@ -378,6 +378,10 @@ main {
                     text-decoration: 0;
                 }
             }
+
+            h2 {
+                font-size: 2rem;
+            }
         }
 
         article {
