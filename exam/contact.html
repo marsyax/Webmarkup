@@ -4,8 +4,16 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="author" content="Max Swart" />
+        <meta
+            name="description"
+            content="Questions about hosting Immich at home? Send a message and you will get an answer within five business days."
+        />
+        <meta
+            name="keywords"
+            content="Immich, Self-Hosting, Homelabbing, Google Photos, Storage"
+        />
         <title>Host It Yourself</title>
-        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
         <link rel="icon" type="image/png" href="./img/favicon_32x32.png" />
     </head>
     <body>
@@ -73,7 +81,9 @@
                 </p>
 
                 <form action="/api/contact-form-submission" method="post">
-                    <label for="email"> Email <span class="red">*</span> </label>
+                    <label for="email">
+                        Email <span class="red">*</span>
+                    </label>
                     <input
                         type="email"
                         name="email"
@@ -89,7 +99,9 @@
                         placeholder="John Doe"
                         required
                     />
-                    <label for="subject"> Subject <span class="red">*</span> </label>
+                    <label for="subject">
+                        Subject <span class="red">*</span>
+                    </label>
                     <input
                         type="text"
                         name="subject"
@@ -97,7 +109,9 @@
                         placeholder="Why is my server on fire?"
                         required
                     />
-                    <label for="content"> Content <span class="red">*</span> </label>
+                    <label for="content">
+                        Content <span class="red">*</span>
+                    </label>
                     <input
                         type="text"
                         name="content"
@@ -122,7 +136,11 @@
                         >
                     </fieldset>
                     <p><span class="red">*</span> Required</p>
-                    <input class="button large accent" type="submit" value="Send ->" />
+                    <input
+                        class="button large accent"
+                        type="submit"
+                        value="Send ->"
+                    />
                 </form>
             </section>
 
