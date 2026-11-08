@@ -50,7 +50,7 @@ h4 {
     box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.15);
     text-decoration: none;
     width: fit-content;
-    transition: 0.2s;
+    transition: background-color 0.2s;
 
     &:hover {
         background-color: #3c4e2f;
