@@ -351,10 +351,11 @@ main {
             ul {
                 padding-top: 12px;
                 padding-left: 24px;
+                text-indent: 6px;
 
                 display: flex;
                 flex-flow: column nowrap;
-                gap: 8px;
+                gap: 12px;
 
                 a {
                     color: #281913;
@@ -366,7 +367,7 @@ main {
         article {
             display: flex;
             flex-flow: column nowrap;
-            gap: 42px;
+            gap: 38px;
 
             section {
                 h3 {
