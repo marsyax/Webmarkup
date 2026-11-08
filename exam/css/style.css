@@ -451,7 +451,7 @@ main {
 				}
 
 				p:first-of-type::first-letter {
-					font-weight: semibold;
+					font-weight: 600;
 					font-size: 1.5rem;
 				}
 
