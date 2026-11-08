@@ -1,206 +1,206 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="author" content="Max Swart" />
-        <meta
-            name="description"
-            content="Install Immich step by step with Docker. Prepare your machine, write the compose file, start the stack and open it in your browser."
-        />
-        <meta
-            name="keywords"
-            content="Immich, Self-Hosting, Homelabbing, Google Photos, Storage"
-        />
-        <title>Getting Started - Host It Yourself</title>
-        <link rel="stylesheet" type="text/css" href="css/style.css" />
-        <link rel="icon" type="image/png" href="./img/favicon_32x32.png" />
-    </head>
-    <body>
-        <section id="cookies">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
-                <path
-                    d="M311.2 81C289.1 77.9 266.6 81.9 246.8 92.4L172.8 131.9C153.1 142.4 137.2 158.9 127.4 179L90.7 254.6C80.9 274.7 77.7 297.5 81.6 319.5L96.1 402.3C100 424.4 110.7 444.6 126.8 460.2L187.1 518.6C203.2 534.2 223.7 544.2 245.8 547.3L328.8 559C350.9 562.1 373.4 558.1 393.2 547.6L467.2 508.1C486.9 497.6 502.8 481.1 512.6 460.9L549.3 385.4C559.1 365.3 562.3 342.5 558.4 320.5L543.8 237.7C539.9 215.6 529.2 195.4 513.1 179.8L452.9 121.5C436.8 105.9 416.3 95.9 394.2 92.8L311.2 81zM272 208C289.7 208 304 222.3 304 240C304 257.7 289.7 272 272 272C254.3 272 240 257.7 240 240C240 222.3 254.3 208 272 208zM208 400C208 382.3 222.3 368 240 368C257.7 368 272 382.3 272 400C272 417.7 257.7 432 240 432C222.3 432 208 417.7 208 400zM432 336C449.7 336 464 350.3 464 368C464 385.7 449.7 400 432 400C414.3 400 400 385.7 400 368C400 350.3 414.3 336 432 336z"
-                />
-            </svg>
-            <p>This page does not store or read cookies.</p>
-        </section>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="author" content="Max Swart" />
+		<meta
+			name="description"
+			content="Install Immich step by step with Docker. Prepare your machine, write the compose file, start the stack and open it in your browser."
+		/>
+		<meta
+			name="keywords"
+			content="Immich, Self-Hosting, Homelabbing, Google Photos, Storage"
+		/>
+		<title>Getting Started - Host It Yourself</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="icon" type="image/png" href="./img/favicon_32x32.png" />
+	</head>
+	<body>
+		<section id="cookies">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+				<path
+					d="M311.2 81C289.1 77.9 266.6 81.9 246.8 92.4L172.8 131.9C153.1 142.4 137.2 158.9 127.4 179L90.7 254.6C80.9 274.7 77.7 297.5 81.6 319.5L96.1 402.3C100 424.4 110.7 444.6 126.8 460.2L187.1 518.6C203.2 534.2 223.7 544.2 245.8 547.3L328.8 559C350.9 562.1 373.4 558.1 393.2 547.6L467.2 508.1C486.9 497.6 502.8 481.1 512.6 460.9L549.3 385.4C559.1 365.3 562.3 342.5 558.4 320.5L543.8 237.7C539.9 215.6 529.2 195.4 513.1 179.8L452.9 121.5C436.8 105.9 416.3 95.9 394.2 92.8L311.2 81zM272 208C289.7 208 304 222.3 304 240C304 257.7 289.7 272 272 272C254.3 272 240 257.7 240 240C240 222.3 254.3 208 272 208zM208 400C208 382.3 222.3 368 240 368C257.7 368 272 382.3 272 400C272 417.7 257.7 432 240 432C222.3 432 208 417.7 208 400zM432 336C449.7 336 464 350.3 464 368C464 385.7 449.7 400 432 400C414.3 400 400 385.7 400 368C400 350.3 414.3 336 432 336z"
+				/>
+			</svg>
+			<p>This page does not store or read cookies.</p>
+		</section>
 
-        <nav class="accent">
-            <a href="./index.html">
-                <img
-                    src="./img/logo.svg"
-                    alt="Host It Yourself logo"
-                    title="Home"
-                    id="navbar-logo"
-                />
-            </a>
+		<nav class="accent">
+			<a href="./index.html">
+				<img
+					src="./img/logo.svg"
+					alt="Host It Yourself logo"
+					title="Home"
+					id="navbar-logo"
+				/>
+			</a>
 
-            <input type="checkbox" id="menu-checkbox" />
-            <section id="hamburger">
-                <span></span><span></span><span></span>
-            </section>
+			<input type="checkbox" id="menu-checkbox" />
+			<section id="hamburger">
+				<span></span><span></span><span></span>
+			</section>
 
-            <ul>
-                <li>
-                    <a href="./index.html">Home</a>
-                </li>
-                <li>
-                    <a href="./meet-immich.html">Meet Immich</a>
-                </li>
-                <li>
-                    <a href="./requirements.html">Requirements</a>
-                </li>
-                <li>
-                    <a class="selected" href="./getting-started.html"
-                        >Getting Started</a
-                    >
-                </li>
-                <li>
-                    <a href="./keep-them-safe.html">Keep Them Safe</a>
-                </li>
-                <li>
-                    <a class="button subtle" href="./contact.html">Contact</a>
-                </li>
-            </ul>
-        </nav>
-        <main>
-            <header>
-                <section>
-                    <h1>Getting Started</h1>
-                    <p>
-                        Here is the whole process, start to finish. 6 short
-                        steps should have the server running in an afternoon.
-                    </p>
-                </section>
+			<ul>
+				<li>
+					<a href="./index.html">Home</a>
+				</li>
+				<li>
+					<a href="./meet-immich.html">Meet Immich</a>
+				</li>
+				<li>
+					<a href="./requirements.html">Requirements</a>
+				</li>
+				<li>
+					<a class="selected" href="./getting-started.html"
+						>Getting Started</a
+					>
+				</li>
+				<li>
+					<a href="./keep-them-safe.html">Keep Them Safe</a>
+				</li>
+				<li>
+					<a class="button subtle" href="./contact.html">Contact</a>
+				</li>
+			</ul>
+		</nav>
+		<main>
+			<header>
+				<section>
+					<h1>Getting Started</h1>
+					<p>
+						Here is the whole process, start to finish. 6 short
+						steps should have the server running in an afternoon.
+					</p>
+				</section>
 
-                <img
-                    src="./img/getting-started-header.webp"
-                    alt="Graphic with 3 items: the Linux mascot Tux, a router and the Docker logo. The three items are arranged in a triangle shape and they have corresponding labels in white. The background is a blue gradient going from light to dark blue."
-                    class="transparent"
-                    title="Three requirements to Immich"
-                />
-            </header>
+				<img
+					src="./img/getting-started-header.webp"
+					alt="Graphic with 3 items: the Linux mascot Tux, a router and the Docker logo. The three items are arranged in a triangle shape and they have corresponding labels in white. The background is a blue gradient going from light to dark blue."
+					class="transparent"
+					title="Three requirements to Immich"
+				/>
+			</header>
 
-            <section class="article-page">
-                <aside id="content">
-                    <h2>Content</h2>
-                    <ol>
-                        <li>
-                            <a href="#install-wsl-or-linux"
-                                >Install WSL or Linux</a
-                            >
-                        </li>
-                        <li>
-                            <a href="#install-docker">Install Docker</a>
-                        </li>
-                        <li>
-                            <a href="#downloading-and-configuring-the-files"
-                                >Downloading and configure the files</a
-                            >
-                        </li>
-                        <li>
-                            <a href="#start-it-and-log-in"
-                                >Start it and log in</a
-                            >
-                        </li>
-                        <li>
-                            <a href="#port-forward-reverse-proxy-or-tailscale"
-                                >Port-forward, reverse proxy or Tailscale</a
-                            >
-                        </li>
-                        <li>
-                            <a href="#have-fun">Have fun!</a>
-                        </li>
-                    </ol>
-                </aside>
-                <article>
-                    <section id="install-wsl-or-linux">
-                        <h3>Step 1 &mdash; Install WSL or Linux</h3>
-                        <p>
-                            Immich runs on Linux, so before anything we need a
-                            Linux system. There are two options&colon; sticking
-                            with Windows or upgrading to Linux.
-                        </p>
-                        <p>
-                            No matter the choice, a system wipe is always a good
-                            idea when you're turning a computer into a server.
-                            You start from a clean slate instead of bringing
-                            along years of clutter, leftover apps and background
-                            processes.
-                        </p>
-                        <p>
-                            <strong
-                                >Wipe the machine and install Linux
-                                (recommended)&colon;</strong
-                            >
-                            Freshly installing Linux is the obvious choice for
-                            this project, as it has less overhead (so better
-                            performance) and is actually made to be up 24&sol;7.
-                            If you&apos;re new to Linux I would recommend Linux
-                            Mint. Instructions for installing Linux Mint can be
-                            found
-                            <a
-                                href="https://linuxmint-installation-guide.readthedocs.io/en/latest/choose.html"
-                                target="_blank"
-                                >here</a
-                            >. If you already know what you’re doing a headless
-                            Debian install is a really strong choice.
-                        </p>
-                        <p>
-                            <strong
-                                >Running Immich on WSL (Windows)&colon;</strong
-                            >
-                            Windows subsystem for Linux (WSL) allows you to run
-                            a local Linux system inside of Windows. Installation
-                            instructions can be found
-                            <a
-                                href="https://learn.microsoft.com/en-us/windows/wsl/install"
-                                target="_blank"
-                                >here</a
-                            >. Please keep in mind that this is not nearly as
-                            smooth as running Linux natively and the Immich team
-                            provides less support for it. If you want to keep
-                            your Windows install though, this will eventually
-                            work.
-                        </p>
-                    </section>
-                    <section id="install-docker">
-                        <h3>Step 2 &mdash; Install Docker</h3>
-                        <p>
-                            Immich runs inside containers using Docker. This
-                            allows for segmentation and easy configuration.
-                        </p>
-                        <figure>
-                            <img
-                                src="./img/docker-container-graphic.webp"
-                                alt="Graphic showing a box labeled “Server” With another box inside labeled “Docker”. The Docker box has two other boxes inside, both labeled as “Containers” with an arrow. One of the two boxes has the text “Immich” and one has the text “...” inside it."
-                                title="Docker container explanation"
-                            />
-                            <figcaption>
-                                Docker container infographic
-                            </figcaption>
-                        </figure>
-                        <p>
-                            To install open up a terminal if you’re running
-                            Linux. If you’re on Windows refer to
-                            <a
-                                href="https://docs.docker.com/desktop/features/wsl/"
-                                target="_blank"
-                                >this guide</a
-                            >
-                            and if you’re on another distribution refer to
-                            <a
-                                href="https://docs.docker.com/engine/install/"
-                                target="_blank"
-                                >this guide</a
-                            >. If you have chosen for Mint or Ubuntu copy and
-                            paste the entire block below into the terminal and
-                            press enter.
-                        </p>
-                        <pre
-                            class="codeblock"
-                        ><code>&num; Add Docker&apos;s official GPG key&colon;
+			<section class="article-page">
+				<aside id="content">
+					<h2>Content</h2>
+					<ol>
+						<li>
+							<a href="#install-wsl-or-linux"
+								>Install WSL or Linux</a
+							>
+						</li>
+						<li>
+							<a href="#install-docker">Install Docker</a>
+						</li>
+						<li>
+							<a href="#downloading-and-configuring-the-files"
+								>Downloading and configure the files</a
+							>
+						</li>
+						<li>
+							<a href="#start-it-and-log-in"
+								>Start it and log in</a
+							>
+						</li>
+						<li>
+							<a href="#port-forward-reverse-proxy-or-tailscale"
+								>Port-forward, reverse proxy or Tailscale</a
+							>
+						</li>
+						<li>
+							<a href="#have-fun">Have fun!</a>
+						</li>
+					</ol>
+				</aside>
+				<article>
+					<section id="install-wsl-or-linux">
+						<h3>Step 1 &mdash; Install WSL or Linux</h3>
+						<p>
+							Immich runs on Linux, so before anything we need a
+							Linux system. There are two options&colon; sticking
+							with Windows or upgrading to Linux.
+						</p>
+						<p>
+							No matter the choice, a system wipe is always a good
+							idea when you're turning a computer into a server.
+							You start from a clean slate instead of bringing
+							along years of clutter, leftover apps and background
+							processes.
+						</p>
+						<p>
+							<strong
+								>Wipe the machine and install Linux
+								(recommended)&colon;</strong
+							>
+							Freshly installing Linux is the obvious choice for
+							this project, as it has less overhead (so better
+							performance) and is actually made to be up 24&sol;7.
+							If you&apos;re new to Linux I would recommend Linux
+							Mint. Instructions for installing Linux Mint can be
+							found
+							<a
+								href="https://linuxmint-installation-guide.readthedocs.io/en/latest/choose.html"
+								target="_blank"
+								>here</a
+							>. If you already know what you’re doing a headless
+							Debian install is a really strong choice.
+						</p>
+						<p>
+							<strong
+								>Running Immich on WSL (Windows)&colon;</strong
+							>
+							Windows subsystem for Linux (WSL) allows you to run
+							a local Linux system inside of Windows. Installation
+							instructions can be found
+							<a
+								href="https://learn.microsoft.com/en-us/windows/wsl/install"
+								target="_blank"
+								>here</a
+							>. Please keep in mind that this is not nearly as
+							smooth as running Linux natively and the Immich team
+							provides less support for it. If you want to keep
+							your Windows install though, this will eventually
+							work.
+						</p>
+					</section>
+					<section id="install-docker">
+						<h3>Step 2 &mdash; Install Docker</h3>
+						<p>
+							Immich runs inside containers using Docker. This
+							allows for segmentation and easy configuration.
+						</p>
+						<figure>
+							<img
+								src="./img/docker-container-graphic.webp"
+								alt="Graphic showing a box labeled “Server” With another box inside labeled “Docker”. The Docker box has two other boxes inside, both labeled as “Containers” with an arrow. One of the two boxes has the text “Immich” and one has the text “...” inside it."
+								title="Docker container explanation"
+							/>
+							<figcaption>
+								Docker container infographic
+							</figcaption>
+						</figure>
+						<p>
+							To install open up a terminal if you’re running
+							Linux. If you’re on Windows refer to
+							<a
+								href="https://docs.docker.com/desktop/features/wsl/"
+								target="_blank"
+								>this guide</a
+							>
+							and if you’re on another distribution refer to
+							<a
+								href="https://docs.docker.com/engine/install/"
+								target="_blank"
+								>this guide</a
+							>. If you have chosen for Mint or Ubuntu copy and
+							paste the entire block below into the terminal and
+							press enter.
+						</p>
+						<pre
+							class="codeblock"
+						><code>&num; Add Docker&apos;s official GPG key&colon;
 sudo apt update &amp;&amp; sudo apt upgrade -y
 sudo apt install ca-certificates curl
 sudo install -m 0755 -d &sol;etc&sol;apt&sol;keyrings
@@ -218,256 +218,256 @@ Signed-By&colon; &sol;etc&sol;apt&sol;keyrings&sol;docker&period;asc
 EOF
 
 sudo apt update</code></pre>
-                        <p>
-                            If there are no errors continue with the following
-                            command&colon;
-                        </p>
-                        <pre
-                            class="codeblock"
-                        ><code>sudo apt install docker-ce docker-ce-cli containerd&period;io docker-buildx-plugin docker-compose-plugin -y</code></pre>
-                        <p>
-                            If there are no further errors Docker is
-                            successfully installed!
-                        </p>
-                    </section>
-                    <section id="downloading-and-configuring-the-files">
-                        <h3>
-                            Step 3 &mdash; Downloading and configuring the files
-                        </h3>
-                        <p>
-                            Make a folder to keep everything tidy and pull
-                            Immich’s latest configuration files:
-                        </p>
+						<p>
+							If there are no errors continue with the following
+							command&colon;
+						</p>
+						<pre
+							class="codeblock"
+						><code>sudo apt install docker-ce docker-ce-cli containerd&period;io docker-buildx-plugin docker-compose-plugin -y</code></pre>
+						<p>
+							If there are no further errors Docker is
+							successfully installed!
+						</p>
+					</section>
+					<section id="downloading-and-configuring-the-files">
+						<h3>
+							Step 3 &mdash; Downloading and configuring the files
+						</h3>
+						<p>
+							Make a folder to keep everything tidy and pull
+							Immich’s latest configuration files:
+						</p>
 
-                        <pre
-                            class="codeblock"
-                        ><code>mkdir immich &amp;&amp; cd immich
+						<pre
+							class="codeblock"
+						><code>mkdir immich &amp;&amp; cd immich
 wget -O docker-compose&period;yml https&colon;&sol;&sol;github&period;com&sol;immich-app&sol;immich&sol;releases&sol;latest&sol;download&sol;docker-compose&period;yml
 wget -O &period;env https&colon;&sol;&sol;github&period;com&sol;immich-app&sol;immich&sol;releases&sol;latest&sol;download&sol;example&period;env</code></pre>
 
-                        <p>
-                            Next, open up your Files app and go to the immich
-                            folder inside of your home directory (should be
-                            right there when you open up the app). Right click
-                            the empty space and turn on ‘Show Hidden Files’
-                        </p>
-                        <figure>
-                            <img
-                                class="transparent"
-                                src="./img/mint-files-1.webp"
-                                alt="A picture of the Linux Mint file explorer showing 13 directories of which one is circled in red. The circled directory is called “immich”.  The file explorer is in a directory named “Home”."
-                                title="The folder we made"
-                            />
-                            <img
-                                class="transparent"
-                                src="./img/mint-files-2.webp"
-                                alt="A picture of the Linux Mint file explorer showing the right-click menu with the mouse hovering over the option “Show Hidden Files”. The file explorer is in a directory named “immich”. This directory includes two folders and one two files."
-                                title="The hidden files now shown"
-                            />
-                            <figcaption>Linux Mint file explorer</figcaption>
-                        </figure>
-                        <p>
-                            Now you see the files that we created, and the
-                            folders that Immich made for us. Open up the ‘.env’
-                            file. This is where you will configure your Immich
-                            server. Here you might want to change the following
-                            values:
-                        </p>
-                        <ul>
-                            <li>
-                                <strong>UPLOAD_LOCATION</strong> - the folder
-                                where your photos will be stored. If you’re only
-                                using the system drive you can just leave it
-                                as-is, but if you’re using an external drive
-                                you’ll need to
-                                <a
-                                    href="https://thelinuxcast.org/posts/2025/howtomountdrives/"
-                                    target="_blank"
-                                    >mount it</a
-                                >
-                                and change this value.
-                            </li>
-                            <li>
-                                <strong>TZ</strong> - your timezone as an
-                                identifier from
-                                <a
-                                    href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List"
-                                    target="_blank"
-                                    >this list</a
-                                >, e.g. Europe/Amsterdam.
-                            </li>
-                        </ul>
-                    </section>
-                    <section id="start-it-and-log-in">
-                        <h3>Step 4 &mdash; Start it and log in</h3>
-                        <p>
-                            In the terminal and from the same folder bring the
-                            container up&colon;
-                        </p>
-                        <pre
-                            class="codeblock"
-                        ><code>sudo docker compose up -d</code></pre>
-                        <p>
-                            In the first run it downloads all the files it
-                            needs, which might take a few minutes depending on
-                            your internet speed. When it’s done open a browser
-                            and go to the following web page:
-                            <a href="http://localhost:2283" target="_blank"
-                                >http://localhost:2283</a
-                            >. Now you’ll be asked to create your admin account.
-                        </p>
-                    </section>
-                    <section id="port-forward-reverse-proxy-or-tailscale">
-                        <h3>
-                            Step 5 &mdash; Port-forward, reverse proxy or
-                            Tailscale
-                        </h3>
-                        <p>
-                            Right now Immich is only reachable on your
-                            network&comma; meaning you can only reach it at
-                            home&period; There are a few ways of accessing
-                            remotely&comma; including poking a hole in your
-                            firewall &lpar;port-forwarding&rpar;&comma; but as
-                            you can imagine that&rsquo;s not very secure&period;
-                            I would recommend one of the following three
-                            options&colon;
-                        </p>
-                        <ul>
-                            <li>
-                                <strong
-                                    >Tailscale &lpar;the easiest
-                                    option&rpar;&colon;</strong
-                                >
-                                Tailscale is a VPN that connects your devices
-                                directly to each other&comma; as if they were on
-                                the same private network&comma; no matter where
-                                they are in the world&period; This allows your
-                                devices to talk without poking holes&comma; as
-                                it&rsquo;s all routed through Tailscale&rsquo;s
-                                network&period; Install Tailscale on the server
-                                and all your devices and connect with the same
-                                account&period; Now you can access your Immich
-                                instance from those devices&period;
-                            </li>
-                            <li>
-                                <strong
-                                    >A reverse proxy
-                                    &lpar;advanced&rpar;&colon;</strong
-                                >
-                                The proper way if you want a real domain name
-                                and proper HTTPS encryption&period; You put a
-                                proxy in front of Immich and it handles the
-                                certificate and forwards traffic&period; I
-                                won&rsquo;t be going into too much depth as it
-                                gets complex quickly&comma; but if you want to
-                                dabble with reverse proxies I would recommend
-                                starting with Caddy&period;
-                            </li>
-                            <li>
-                                <strong
-                                    >A Cloudflare tunnel
-                                    &lpar;compromise&rpar;&colon;</strong
-                                >
-                                Here you don&rsquo;t need a reverse proxy&comma;
-                                as the tunnel routes the traffic&period; You run
-                                a small program called cloudflared on the server
-                                and connect through their tunnel&period; Then
-                                you can point Immich to your domain in the
-                                Cloudflare dashboard and reach it from
-                                anywhere&period; This method comes with the
-                                added bonus of having security measures from one
-                                of the biggest online security companies and is
-                                completely free&period; The compromise is that
-                                you lose a bit of privacy to Cloudflare and when
-                                Cloudflare goes down &lpar;again&rpar; so does
-                                your connection to the server&period;
-                            </li>
-                        </ul>
-                    </section>
-                    <section id="have-fun">
-                        <h3>Step 6 &mdash; Have fun!</h3>
-                        <p>
-                            That&rsquo;s the hard part done&period; Install the
-                            Immich app&comma; login to your server&comma; switch
-                            on backup and start taking pictures&period;
-                            They&rsquo;ll upload in the background and your
-                            library stays yours from now on&excl;
-                        </p>
-                        <p>
-                            If you enjoyed this and want to host more here are a
-                            few open-source projects you could look into&colon;
-                        </p>
-                        <ul>
-                            <li>
-                                <strong>Nextcloud&colon;</strong>
+						<p>
+							Next, open up your Files app and go to the immich
+							folder inside of your home directory (should be
+							right there when you open up the app). Right click
+							the empty space and turn on ‘Show Hidden Files’
+						</p>
+						<figure>
+							<img
+								class="transparent"
+								src="./img/mint-files-1.webp"
+								alt="A picture of the Linux Mint file explorer showing 13 directories of which one is circled in red. The circled directory is called “immich”.  The file explorer is in a directory named “Home”."
+								title="The folder we made"
+							/>
+							<img
+								class="transparent"
+								src="./img/mint-files-2.webp"
+								alt="A picture of the Linux Mint file explorer showing the right-click menu with the mouse hovering over the option “Show Hidden Files”. The file explorer is in a directory named “immich”. This directory includes two folders and one two files."
+								title="The hidden files now shown"
+							/>
+							<figcaption>Linux Mint file explorer</figcaption>
+						</figure>
+						<p>
+							Now you see the files that we created, and the
+							folders that Immich made for us. Open up the ‘.env’
+							file. This is where you will configure your Immich
+							server. Here you might want to change the following
+							values:
+						</p>
+						<ul>
+							<li>
+								<strong>UPLOAD_LOCATION</strong> - the folder
+								where your photos will be stored. If you’re only
+								using the system drive you can just leave it
+								as-is, but if you’re using an external drive
+								you’ll need to
+								<a
+									href="https://thelinuxcast.org/posts/2025/howtomountdrives/"
+									target="_blank"
+									>mount it</a
+								>
+								and change this value.
+							</li>
+							<li>
+								<strong>TZ</strong> - your timezone as an
+								identifier from
+								<a
+									href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List"
+									target="_blank"
+									>this list</a
+								>, e.g. Europe/Amsterdam.
+							</li>
+						</ul>
+					</section>
+					<section id="start-it-and-log-in">
+						<h3>Step 4 &mdash; Start it and log in</h3>
+						<p>
+							In the terminal and from the same folder bring the
+							container up&colon;
+						</p>
+						<pre
+							class="codeblock"
+						><code>sudo docker compose up -d</code></pre>
+						<p>
+							In the first run it downloads all the files it
+							needs, which might take a few minutes depending on
+							your internet speed. When it’s done open a browser
+							and go to the following web page:
+							<a href="http://localhost:2283" target="_blank"
+								>http://localhost:2283</a
+							>. Now you’ll be asked to create your admin account.
+						</p>
+					</section>
+					<section id="port-forward-reverse-proxy-or-tailscale">
+						<h3>
+							Step 5 &mdash; Port-forward, reverse proxy or
+							Tailscale
+						</h3>
+						<p>
+							Right now Immich is only reachable on your
+							network&comma; meaning you can only reach it at
+							home&period; There are a few ways of accessing
+							remotely&comma; including poking a hole in your
+							firewall &lpar;port-forwarding&rpar;&comma; but as
+							you can imagine that&rsquo;s not very secure&period;
+							I would recommend one of the following three
+							options&colon;
+						</p>
+						<ul>
+							<li>
+								<strong
+									>Tailscale &lpar;the easiest
+									option&rpar;&colon;</strong
+								>
+								Tailscale is a VPN that connects your devices
+								directly to each other&comma; as if they were on
+								the same private network&comma; no matter where
+								they are in the world&period; This allows your
+								devices to talk without poking holes&comma; as
+								it&rsquo;s all routed through Tailscale&rsquo;s
+								network&period; Install Tailscale on the server
+								and all your devices and connect with the same
+								account&period; Now you can access your Immich
+								instance from those devices&period;
+							</li>
+							<li>
+								<strong
+									>A reverse proxy
+									&lpar;advanced&rpar;&colon;</strong
+								>
+								The proper way if you want a real domain name
+								and proper HTTPS encryption&period; You put a
+								proxy in front of Immich and it handles the
+								certificate and forwards traffic&period; I
+								won&rsquo;t be going into too much depth as it
+								gets complex quickly&comma; but if you want to
+								dabble with reverse proxies I would recommend
+								starting with Caddy&period;
+							</li>
+							<li>
+								<strong
+									>A Cloudflare tunnel
+									&lpar;compromise&rpar;&colon;</strong
+								>
+								Here you don&rsquo;t need a reverse proxy&comma;
+								as the tunnel routes the traffic&period; You run
+								a small program called cloudflared on the server
+								and connect through their tunnel&period; Then
+								you can point Immich to your domain in the
+								Cloudflare dashboard and reach it from
+								anywhere&period; This method comes with the
+								added bonus of having security measures from one
+								of the biggest online security companies and is
+								completely free&period; The compromise is that
+								you lose a bit of privacy to Cloudflare and when
+								Cloudflare goes down &lpar;again&rpar; so does
+								your connection to the server&period;
+							</li>
+						</ul>
+					</section>
+					<section id="have-fun">
+						<h3>Step 6 &mdash; Have fun!</h3>
+						<p>
+							That&rsquo;s the hard part done&period; Install the
+							Immich app&comma; login to your server&comma; switch
+							on backup and start taking pictures&period;
+							They&rsquo;ll upload in the background and your
+							library stays yours from now on&excl;
+						</p>
+						<p>
+							If you enjoyed this and want to host more here are a
+							few open-source projects you could look into&colon;
+						</p>
+						<ul>
+							<li>
+								<strong>Nextcloud&colon;</strong>
 
-                                Full cloud suite with files&comma;
-                                calendar&comma; tasks&comma; photos&comma;
-                                email&comma; contacts and so much more
-                            </li>
-                            <li>
-                                <strong>SearXNG&colon;</strong>
-                                A self-hosted privacy-focused search engine
-                            </li>
-                            <li>
-                                <strong>Jellyfin&colon;</strong>
-                                Host your own video streaming service with local
-                                transcoding&comma; automatic metadata and
-                                support for all platforms
-                            </li>
-                            <li>
-                                <strong>Vert&colon;</strong>
-                                Open-source local file conversion with no limits
-                                and no ads
-                            </li>
-                            <li>
-                                <strong>Open WebUI&colon;</strong>
-                                A full-fledged AI interface&comma; similar to
-                                that of ChatGPT
-                            </li>
-                        </ul>
-                    </section>
-                    <section class="next-page-cta">
-                        <h3>Photos are in — now don’t lose them</h3>
-                        <p>
-                            A running server is only half the story; here's how
-                            to keep those photos safe in case a disk eventually
-                            fails.
-                        </p>
-                        <a
-                            href="./keep-them-safe.html"
-                            class="button large accent"
-                            >Keep Them Safe</a
-                        >
-                    </section>
-                </article>
-            </section>
+								Full cloud suite with files&comma;
+								calendar&comma; tasks&comma; photos&comma;
+								email&comma; contacts and so much more
+							</li>
+							<li>
+								<strong>SearXNG&colon;</strong>
+								A self-hosted privacy-focused search engine
+							</li>
+							<li>
+								<strong>Jellyfin&colon;</strong>
+								Host your own video streaming service with local
+								transcoding&comma; automatic metadata and
+								support for all platforms
+							</li>
+							<li>
+								<strong>Vert&colon;</strong>
+								Open-source local file conversion with no limits
+								and no ads
+							</li>
+							<li>
+								<strong>Open WebUI&colon;</strong>
+								A full-fledged AI interface&comma; similar to
+								that of ChatGPT
+							</li>
+						</ul>
+					</section>
+					<section class="next-page-cta">
+						<h3>Photos are in — now don’t lose them</h3>
+						<p>
+							A running server is only half the story; here's how
+							to keep those photos safe in case a disk eventually
+							fails.
+						</p>
+						<a
+							href="./keep-them-safe.html"
+							class="button large accent"
+							>Keep Them Safe</a
+						>
+					</section>
+				</article>
+			</section>
 
-            <footer>
-                <ul>
-                    <li>
-                        <a href="./index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="./meet-immich.html">Meet Immich</a>
-                    </li>
-                    <li>
-                        <a href="./requirements.html">Requirements</a>
-                    </li>
-                    <li>
-                        <a href="./getting-started.html">Getting Started</a>
-                    </li>
-                    <li>
-                        <a href="./keep-them-safe.html">Keep Them Safe</a>
-                    </li>
-                    <li>
-                        <a class="button accent" href="./contact.html"
-                            >Contact</a
-                        >
-                    </li>
-                </ul>
-                <p>&copy; Max Swart 2026</p>
-            </footer>
-        </main>
-    </body>
+			<footer>
+				<ul>
+					<li>
+						<a href="./index.html">Home</a>
+					</li>
+					<li>
+						<a href="./meet-immich.html">Meet Immich</a>
+					</li>
+					<li>
+						<a href="./requirements.html">Requirements</a>
+					</li>
+					<li>
+						<a href="./getting-started.html">Getting Started</a>
+					</li>
+					<li>
+						<a href="./keep-them-safe.html">Keep Them Safe</a>
+					</li>
+					<li>
+						<a class="button accent" href="./contact.html"
+							>Contact</a
+						>
+					</li>
+				</ul>
+				<p>&copy; Max Swart 2026</p>
+			</footer>
+		</main>
+	</body>
 </html>
