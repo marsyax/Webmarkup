@@ -520,12 +520,23 @@ main {
 				font-size: 20px;
 			}
 
-			input {
+			input,
+			textarea,
+			legend {
 				font-family: "Roboto Serif", serif;
 			}
 
+			fieldset {
+				padding: 8px 12px;
+				border-radius: 8px;
+				label {
+					margin-right: 8px;
+				}
+			}
+
 			input[type="text"],
-			input[type="email"] {
+			input[type="email"],
+			textarea {
 				font-size: 20px;
 				padding: 10px 16px;
 				border: none;

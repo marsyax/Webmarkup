@@ -112,34 +112,38 @@
 					<label for="content">
 						Content <span class="red">*</span>
 					</label>
-					<input
+					<textarea
+						rows="4"
 						type="text"
 						name="content"
 						id="content"
-						placeholder="Whenever I try turning on my server it catches fire instantly."
+						placeholder="Whenever I try turning on my server it catches fire instantly"
 						required
-					/>
+					></textarea>
 					<fieldset>
-						<legend>Do you agree to the terms stated above?</legend>
-						<label
-							><input type="radio" name="radio" value="yes" />
-							Yes</label
-						>
+						<legend>
+							Do you agree to your message being stored for 30
+							days?
+						</legend>
 						<label
 							><input
 								type="radio"
 								name="radio"
-								value="no"
+								value="yes"
 								required
 							/>
-							No<span class="red">*</span></label
+							Yes <span class="red">*</span></label
+						>
+						<label
+							><input type="radio" name="radio" value="no" />
+							No</label
 						>
 					</fieldset>
 					<p><span class="red">*</span> Required</p>
 					<input
 						class="button large accent"
 						type="submit"
-						value="Send ->"
+						value="Send"
 					/>
 				</form>
 			</section>
