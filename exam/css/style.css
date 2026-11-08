@@ -122,6 +122,7 @@ nav {
     }
 
     ul {
+        float: right;
         display: flex;
         flex-flow: row nowrap;
         gap: clamp(8px, 1.5vw, 24px);
