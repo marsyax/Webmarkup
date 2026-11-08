@@ -50,19 +50,36 @@ h4 {
     box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.15);
     text-decoration: none;
     width: fit-content;
+    transition: 0.2s;
+
+    &:hover {
+        background-color: #3c4e2f;
+    }
 
     &.subtle {
         background-color: #c7a7b0;
         color: #281913;
+
+        &:hover {
+            background-color: #bcc9a7;
+        }
     }
 
     &.accent {
         background-color: #bcc9a7;
         color: #281913;
+
+        &:hover {
+            background-color: #c7a7b0;
+        }
     }
 
     &.secondary {
         background-color: #3c4e2f;
+
+        &:hover {
+            background-color: #732439;
+        }
     }
 
     &.large {
