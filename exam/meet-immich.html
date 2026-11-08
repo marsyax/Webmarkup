@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Host It Yourself</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="icon" type="image/x-icon" href="./img/favicon_32x32.png" />
+    </head>
+    <body>
+        <nav class="accent">
+            <a href="./index.html">
+                <img src="./img/logo.svg" alt="" id="navbar-logo" />
+            </a>
+
+            <input type="checkbox" id="menu-checkbox" />
+            <section id="hamburger">
+                <span></span><span></span><span></span>
+            </section>
+
+            <ul>
+                <li>
+                    <a href="./index.html">Home</a>
+                </li>
+                <li>
+                    <a class="selected" href="./meet-immich.html"
+                        >Meet Immich</a
+                    >
+                </li>
+                <li>
+                    <a href="./requirements.html">Requirements</a>
+                </li>
+                <li>
+                    <a href="./getting-started.html">Getting Started</a>
+                </li>
+                <li>
+                    <a href="./keep-them-safe.html">Keep Them Safe</a>
+                </li>
+                <li>
+                    <a class="button subtle" href="./contact.html">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <header>
+                <section>
+                    <h1>Meet Immich</h1>
+                    <p>
+                        Immich is a free, open-source photo and video library
+                        you run on your own hardware. It looks and feels like
+                        Google Photos with automatic backups, albums and
+                        sharing, except it lives on your server. Unlike Google
+                        Photos, your data remains completely under your control.
+                    </p>
+                </section>
+
+                <img
+                    src="./img/immich-homepage-showcase.webp"
+                    alt="Screenshot of a Immich homepage featuring a picture timeline, a bar at the top with buttons and a navigation bar on the left. The timeline is filled with 6 images, of which the first two are cut off and not fully visible. The two pictures on the next row are of a sunset in a city and of a boy on a couch. The last two pictures are vague, being almost completely purple. These images appear to be taken in a club."
+                    class="transparent"
+                />
+            </header>
+
+            <section class="article-page">
+                <aside id="content">
+                    <h4>Content</h4>
+                    <ul>
+                        <li>
+                            <a href="#backups-that-just-happen"
+                                >Backups that just happen</a
+                            >
+                        </li>
+                        <li>
+                            <a href="#search-that-runs-on-your-own-machine">Search that runs on your own machine</a>
+                        </li>
+                        <li><a href="#albums-people-and-sharing">Albums, people and sharing</a></li>
+                        <li><a href="#compared-to-google-photos">Compared to Google Photos</a></li>
+                    </ul>
+                </aside>
+                <article>
+                    <section id="backups-that-just-happen">
+                        <h3>Backups that just happen</h3>
+                        <p>
+                            Install the app, log in, turn on backups and that’s
+                            the last time you think about backups. Every photo
+                            and video on your phone automatically gets synced
+                            with the server as soon as you connect to WiFi.
+                            Everything lands on a timeline you can scroll
+                            through by day, and because the original is safe you
+                            can remove it from your phone clearing up space. No
+                            more notifications from Google asking for more
+                            storage. Your only limit is the size of the drive(s)
+                            you own.
+                        </p>
+                        <figure>
+                            <img
+                                class="transparent"
+                                src="./img/phone-backup-showcase.webp"
+                                alt="Screenshot of a “London 2026” photo album. The album is being viewed on an Immich timeline with the corresponding Immich styling. The album holds 7 images all from August 8. The first 6 images are shots of architecture around London city, with the last picture being of a long bending subway tunnel."
+                            />
+                            <figcaption>
+                                Showcase of automatic mobile backups
+                            </figcaption>
+                        </figure>
+                    </section>
+                    <section id="search-that-runs-on-your-own-machine">
+                        <h3>Search that runs on your own machine</h3>
+                        <p>
+                            Immich doesn’t just store your photos, it
+                            understands them and does it fully locally. Your
+                            photos never leave your server. It scans faces and
+                            groups them, where you can name each face for easy
+                            searching. It detects objects, scenes and even text
+                            in your images. It also stores metadata like GPS and
+                            dates. All of this makes it really easy to find
+                            “that one image” from 2 years ago. You can also
+                            browse by person, by place, on a map, or jump
+                            straight to a date.
+                        </p>
+                    </section>
+                    <section id="albums-people-and-sharing">
+                        <h3>Albums, people and sharing</h3>
+                        <p>
+                            Creating albums works the exact same as in Google
+                            Photos. Just create the album and add your pictures
+                            to it. If you have multiple users on the server you
+                            can share albums between users, allowing all members
+                            to add to the album. This year I went to London with
+                            my family and I shared an album, which resulted in a
+                            real fun collection of pictures that we are easily
+                            able to share with other family members. You can
+                            share photos and albums with a public link, making
+                            them accessible to anyone, though this is only
+                            possible if you set up a public domain (refer to
+                            Getting Started step 5). Immich also has the default
+                            folders favorites, archive, locked folder and trash.
+                            It supports Live Photos, motion clips and RAW files.
+                        </p>
+                        <figure>
+                            <img
+                                class="transparent"
+                                src="./img/immich-album-showcase.webp"
+                                alt="Screenshot of a “London 2026” photo album. The album is being viewed on an Immich timeline with the corresponding Immich styling. The album holds 7 images all from August 8. The first 6 images are shots of architecture around London city, with the last picture being of a long bending subway tunnel."
+                            />
+                            <figcaption>My family’s shared album</figcaption>
+                        </figure>
+                    </section>
+                    <section id="compared-to-google-photos">
+                        <h3>Compared to Google Photos</h3>
+                        <p>
+                            For the core job Immich is a drop-in replacement. It
+                            has back-ups, browsing, searching, organization and
+                            sharing. Though there are some trade-offs: you give
+                            up Google’s AI editing tools (which might be a
+                            positive for you), the ease of use and the comfort
+                            and safety of a company keeping your photos safe.
+                            However, the pros are big: no subscription, no ads,
+                            no scanning your library for profiling and complete
+                            control over your photos. If what you mainly want is
+                            your photos safe, organized and private, you won't
+                            miss the rest.
+                        </p>
+                    </section>
+                    <section class="next-page-cta">
+                        <h3>Convinced?</h3>
+                        <p>
+                            Good, because the hard part isn’t Immich. It’s
+                            setting up the server. Here’s exactly what you need
+                            to get it running.
+                        </p>
+                        <a href="./requirements.html" class="button large accent">Requirements</a>
+                    </section>
+                </article>
+            </section>
+
+            <footer>
+                <ul>
+                    <li>
+                        <a class="selected" href="./index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="./meet-immich.html">Meet Immich</a>
+                    </li>
+                    <li>
+                        <a href="./requirements.html">Requirements</a>
+                    </li>
+                    <li>
+                        <a href="./getting-started.html">Getting Started</a>
+                    </li>
+                    <li>
+                        <a href="./keep-them-safe.html">Keep Them Safe</a>
+                    </li>
+                    <li>
+                        <a class="button accent" href="./contact.html"
+                            >Contact</a
+                        >
+                    </li>
+                </ul>
+                <p>&copy; Max Swart 2026</p>
+            </footer>
+        </main>
+    </body>
+</html>
