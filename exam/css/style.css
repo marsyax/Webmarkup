@@ -26,7 +26,8 @@ h5,
 h6 {
     font-family: "Prompt", sans-serif;
     line-height: 1.2;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
+    word-spacing: -0.1em;
 }
 
 h1 {
