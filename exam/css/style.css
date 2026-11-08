@@ -136,8 +136,6 @@ nav {
                     font-weight: 800;
                     text-decoration: underline 2px;
                 }
-
-
             }
         }
     }
@@ -205,6 +203,10 @@ main {
                 margin-bottom: 6px;
                 font-size: clamp(1.75rem, 5vw, 3.875rem);
             }
+
+            p {
+                font-size: 1.25rem;
+            }
         }
 
         img {
@@ -220,7 +222,6 @@ main {
             section {
                 p {
                     margin-bottom: 36px;
-                    font-size: 1.25rem;
                 }
             }
 
@@ -381,7 +382,7 @@ main {
                     padding-bottom: 8px;
 
                     a {
-                        color: #3C4E2F;
+                        color: #3c4e2f;
                         text-decoration-thickness: 2px;
                     }
                 }
