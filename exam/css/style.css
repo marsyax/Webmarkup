@@ -353,7 +353,7 @@ main {
             position: sticky;
             top: 90px;
 
-            ul {
+            ul, ol {
                 padding-top: 12px;
                 padding-left: 24px;
                 text-indent: 6px;
@@ -385,6 +385,10 @@ main {
                     a {
                         color: #3c4e2f;
                         text-decoration-thickness: 2px;
+
+                        &:visited {
+                            color: #284018;
+                        }
                     }
                 }
 
