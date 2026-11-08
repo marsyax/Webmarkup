@@ -396,6 +396,31 @@ main {
 			gap: 38px;
 			min-width: 0;
 
+			table {
+				border-collapse: collapse;
+
+				tbody {
+					tr {
+						border-top: 1px solid rgba(0, 0, 0, 0.2);
+					}
+				}
+
+				td {
+					font-size: 0.875rem;
+
+					&:first-child {
+						font-weight: 600;
+					}
+				}
+
+				td,
+				th {
+					&:nth-child(even) {
+						background-color: #e9e6e6;
+					}
+				}
+			}
+
 			section {
 				h3 {
 					color: #732439;
