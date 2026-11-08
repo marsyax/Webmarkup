@@ -195,20 +195,20 @@
                         <pre
                             class="codeblock"
                         ><code>&num; Add Docker&apos;s official GPG key&colon;
-sudo apt update &amp;&amp; sudo apt upgrade &hyphen;y
-sudo apt install ca&hyphen;certificates curl
-sudo install &hyphen;m 0755 &hyphen;d &sol;etc&sol;apt&sol;keyrings
-sudo curl &hyphen;fsSL https&colon;&sol;&sol;download&period;docker&period;com&sol;linux&sol;ubuntu&sol;gpg &hyphen;o &sol;etc&sol;apt&sol;keyrings&sol;docker&period;asc
+sudo apt update &amp;&amp; sudo apt upgrade -y
+sudo apt install ca-certificates curl
+sudo install -m 0755 -d &sol;etc&sol;apt&sol;keyrings
+sudo curl -fsSL https&colon;&sol;&sol;download&period;docker&period;com&sol;linux&sol;ubuntu&sol;gpg -o &sol;etc&sol;apt&sol;keyrings&sol;docker&period;asc
 sudo chmod a&plus;r &sol;etc&sol;apt&sol;keyrings&sol;docker&period;asc
 
 &num; Add the repository to Apt sources&colon;
 sudo tee &sol;etc&sol;apt&sol;sources&period;list&period;d&sol;docker&period;sources &lt;&lt;EOF
 Types&colon; deb
 URIs&colon; https&colon;&sol;&sol;download&period;docker&period;com&sol;linux&sol;ubuntu
-Suites&colon; &dollar;&lpar;&period; &sol;etc&sol;os&hyphen;release &amp;&amp; echo &quot;&dollar;&lcub;UBUNTU_CODENAME&colon;&hyphen;&dollar;VERSION_CODENAME&rcub;&quot;&rpar;
+Suites&colon; &dollar;&lpar;&period; &sol;etc&sol;os-release &amp;&amp; echo &quot;&dollar;&lcub;UBUNTU_CODENAME&colon;-&dollar;VERSION_CODENAME&rcub;&quot;&rpar;
 Components&colon; stable
-Architectures&colon; &dollar;&lpar;dpkg &hyphen;&hyphen;print&hyphen;architecture&rpar;
-Signed&hyphen;By&colon; &sol;etc&sol;apt&sol;keyrings&sol;docker&period;asc
+Architectures&colon; &dollar;&lpar;dpkg --print-architecture&rpar;
+Signed-By&colon; &sol;etc&sol;apt&sol;keyrings&sol;docker&period;asc
 EOF
 
 sudo apt update</code></pre>
@@ -218,7 +218,7 @@ sudo apt update</code></pre>
                         </p>
                         <pre
                             class="codeblock"
-                        ><code>sudo apt install docker&hyphen;ce docker&hyphen;ce&hyphen;cli containerd&period;io docker&hyphen;buildx&hyphen;plugin docker&hyphen;compose&hyphen;plugin &hyphen;y</code></pre>
+                        ><code>sudo apt install docker-ce docker-ce-cli containerd&period;io docker-buildx-plugin docker-compose-plugin -y</code></pre>
                         <p>
                             If there are no further errors Docker is
                             successfully installed!
@@ -236,8 +236,8 @@ sudo apt update</code></pre>
                         <pre
                             class="codeblock"
                         ><code>mkdir immich &amp;&amp; cd immich
-wget &hyphen;O docker&hyphen;compose&period;yml https&colon;&sol;&sol;github&period;com&sol;immich&hyphen;app&sol;immich&sol;releases&sol;latest&sol;download&sol;docker&hyphen;compose&period;yml
-wget &hyphen;O &period;env https&colon;&sol;&sol;github&period;com&sol;immich&hyphen;app&sol;immich&sol;releases&sol;latest&sol;download&sol;example&period;env</code></pre>
+wget -O docker-compose&period;yml https&colon;&sol;&sol;github&period;com&sol;immich-app&sol;immich&sol;releases&sol;latest&sol;download&sol;docker-compose&period;yml
+wget -O &period;env https&colon;&sol;&sol;github&period;com&sol;immich-app&sol;immich&sol;releases&sol;latest&sol;download&sol;example&period;env</code></pre>
 
                         <p>
                             Next, open up your Files app and go to the immich
@@ -300,7 +300,7 @@ wget &hyphen;O &period;env https&colon;&sol;&sol;github&period;com&sol;immich&hy
                         </p>
                         <pre
                             class="codeblock"
-                        ><code>sudo docker compose up &hyphen;d</code></pre>
+                        ><code>sudo docker compose up -d</code></pre>
                         <p>
                             In the first run it downloads all the files it
                             needs, which might take a few minutes depending on
@@ -321,7 +321,7 @@ wget &hyphen;O &period;env https&colon;&sol;&sol;github&period;com&sol;immich&hy
                             network&comma; meaning you can only reach it at
                             home&period; There are a few ways of accessing
                             remotely&comma; including poking a hole in your
-                            firewall &lpar;port&hyphen;forwarding&rpar;&comma;
+                            firewall &lpar;port-forwarding&rpar;&comma;
                             but as you can imagine that&rsquo;s not very
                             secure&period; I would recommend one of the
                             following three options&colon;
@@ -399,7 +399,7 @@ wget &hyphen;O &period;env https&colon;&sol;&sol;github&period;com&sol;immich&hy
                         </p>
                         <p>
                             If you enjoyed this and want to host more here are a
-                            few open&hyphen;source projects you could look
+                            few open-source projects you could look
                             into&colon;
                         </p>
                         <ul>
@@ -412,7 +412,7 @@ wget &hyphen;O &period;env https&colon;&sol;&sol;github&period;com&sol;immich&hy
                             </li>
                             <li>
                                 <strong>SearXNG&colon;</strong>
-                                A self&hyphen;hosted privacy&hyphen;focused
+                                A self-hosted privacy-focused
                                 search engine
                             </li>
                             <li>
@@ -423,12 +423,12 @@ wget &hyphen;O &period;env https&colon;&sol;&sol;github&period;com&sol;immich&hy
                             </li>
                             <li>
                                 <strong> Vert&colon; </strong>
-                                Open&hyphen;source local file conversion with no
+                                Open-source local file conversion with no
                                 limits and no ads
                             </li>
                             <li>
                                 <strong> Open WebUI&colon; </strong>
-                                A full&hyphen;fledged AI interface&comma;
+                                A full-fledged AI interface&comma;
                                 similar to that of ChatGPT
                             </li>
                         </ul>
