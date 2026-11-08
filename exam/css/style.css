@@ -441,6 +441,12 @@ main {
 					}
 				}
 
+				video {
+					width: 100%;
+					border-radius: 8px;
+					box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.15);
+				}
+
 				p:first-of-type::first-letter {
 					font-weight: semibold;
 					font-size: 1.5rem;
