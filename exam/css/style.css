@@ -189,6 +189,7 @@ main {
         height: 472px;
         display: flex;
         align-items: center;
+        /* This padding acts as "max-width" for an element. */
         padding: 24px max(48px, calc((100% - 920px) / 2));
         gap: 48px;
         flex-flow: row nowrap;
